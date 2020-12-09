@@ -11,9 +11,11 @@ mongoose.connect(process.env.MONGODB_URI || `mongodb://localhost:27017/watchedSt
 const StockSnapshot = require('./models/stockSnapshot')(mongoose);
 const WatchedStock = require('./models/watchedStock')(mongoose);
 const TweetStream = require('./models/tweetStream')(mongoose);
+const SentimentRecord = require('./models/sentimentRecord')(mongoose);
 
 module.exports = {
     StockSnapshot,
 	WatchedStock,
-	TweetStream
+	TweetStream,
+	SentimentRecord
 }
